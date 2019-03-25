@@ -1,0 +1,211 @@
+#content{
+	width: 747px;
+	float: right;
+	height: auto;
+	@media (min-width: 768px) and (max-width: 983px) {
+		width: 73%;
+		margin: 0 5px;
+	}
+	@media (min-width: 320px) and (max-width: 767px) {
+		width: 100%;
+	}	
+	.slideshow-container{
+		margin-top: 8px;
+		max-width: 747px;
+		position: relative;
+		.slider{
+			position: relative;
+			img{
+				max-width: 100%;
+				position: relative;
+				z-index: -1;
+			}
+			.slider-text{
+				position: absolute;
+				bottom: 0;
+				background: $color-important;
+				width: 100%;
+				color: $color1;
+				text-align: left;
+				height: 48px;
+				font-size: 14px;
+				line-height: 1.3em;
+				border-bottom-left-radius: 7px;
+				border-bottom-right-radius: 7px;
+				opacity: 0.9;
+				@media (min-width: 320px) and (max-width: 767px) {
+					display: block;
+				    position: relative;
+				    opacity: 1;
+				    font-size: 12px;
+				    bottom: 7px;
+				    height: 56px;
+				}	
+				p{
+					padding: 5px 0 0 20px;
+					 @media (min-width: 768px) and (max-width: 983px) {
+						padding: 1px 0 1px 20px;
+					}
+				}
+			}
+		}
+		ul{
+			&.slick-dots{
+				width: auto;
+			    height: 25px;
+			    top: 10px;
+			    right: 12px;
+			    @media (min-width: 768px) and (max-width: 983px) {
+					top: 2px;
+					right: 4px;
+				}
+				@media (min-width: 320px) and (max-width: 767px) {
+					bottom: -18px;
+				    right: 0;
+				    left: 0;
+				    top:0;
+				}	
+			    li{
+			    	@media (min-width: 320px) and (max-width: 767px) {
+						width: 15px;
+					}	
+			    	margin: 0px;
+			    	margin-right: 2px;
+			    	button{
+			    		&:before{
+			    			font-size: 20px;
+						    color: #caa484;
+						    opacity: 1;
+						    @media (min-width: 320px) and (max-width: 767px) {
+								font-size: 10px;
+							}	
+			    		}
+			    	}
+				    &.slick-active{
+				    	button{
+				    		&:before{
+				    			color: $color-important;
+    							opacity: 1;
+				    		}
+				    	}
+				    }
+				}
+			}
+		}
+		.slick-prev, .slick-next{
+			display: none !important;
+		}
+		.slick-dotted.slick-slider{
+			 @media (min-width: 768px) and (max-width: 983px) {
+				margin-bottom: 14px;
+			}
+		}
+	}
+	.text{
+		@media (min-width: 320px) and (max-width: 767px) {
+			margin: 10px;
+			text-align: justify;
+		}
+		h2{
+			font-size: 24px;
+			color: $color-important;
+			padding-bottom: 20px;
+			@media (min-width: 768px) and (max-width: 983px) {
+				padding-bottom: 10px;
+			}
+		}
+		p{
+			font-size: 12px;
+			line-height: 1.25em;
+		}
+	}
+	.product{
+		@include display-position;
+		width: 100%;
+		overflow: hidden;
+		.product-list{
+			@include display-position;
+			overflow: hidden;
+			@media (min-width: 320px) and (max-width: 767px) {
+				width: 98%;
+				margin: 0 auto;
+			}
+			li{
+				position: relative;
+				width: 232px;
+				height:138px;
+				margin: 23px 24px 0 0px;
+				float: left;
+				@media (min-width: 768px) and (max-width: 983px) {
+					width: 30%;
+					height: auto;
+				}
+				@media (min-width: 320px) and (max-width: 767px) {
+					width: 43%;
+				    height: auto;
+				    margin: 20px 5px 0 10px;
+				}
+				&:nth-child(3n){
+					margin: 23px 0 0 0;
+					@media (min-width: 320px) and (max-width: 767px) {
+						margin: 20px 5px 0 10px;
+					}
+				}
+				a{
+					position: absolute;
+					bottom: 0;
+					right: 0;
+					background: #7b5229;
+					opacity: 0.8;
+					width: 100%;
+					color: $color1;
+					height: 26px;
+					font-size: 16px;
+					@media (min-width: 768px) and (max-width: 983px) {
+						font-size: 14px;
+					}
+					@media (min-width: 320px) and (max-width: 767px) {
+						font-size: 12px;
+					}
+					p{
+						padding-left: 5px;
+						padding-top: 5px;
+					}
+					&.name-product{
+						&:after{
+							content: '›';
+							top: 0;
+							right: 10px;
+						    position: absolute;
+						    color: #ffffff;
+						    font-size: 24px;
+						    font-weight: bold;
+						    @media (min-width: 768px) and (max-width: 983px) {
+								font-size: 21px;
+							}
+							@media (min-width: 320px) and (max-width: 767px) {
+								right: 3px;
+								font-size: 22px;
+							}
+						}
+					}
+				}
+				&:hover{
+					outline: 4px solid #be0028;
+				    outline-offset: -4px;
+				    cursor: pointer;
+				    background: rgba(123, 82, 41, 0.4);
+					a{
+						background: $color-important;
+						opacity: 1;
+					}
+				}
+			}	
+			img{
+				width: 100%;
+				position: relative;
+			    z-index: -100;
+			}
+		}
+	}
+}

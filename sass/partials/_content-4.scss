@@ -1,0 +1,174 @@
+#content{
+	.product-container{
+		width: 512px;
+		height: auto;
+		overflow: hidden;
+		display: block;
+		position: relative;
+		float: left;
+		@media (min-width: 768px) and (max-width: 983px) {
+			width: 80%;
+		}
+		@media (min-width: 320px) and (max-width: 767px) {
+			width: 100%;
+		}
+		.product{
+			.product-list{
+				li{
+					height: auto;
+					&.item{
+						margin: 0 24px 0 0;
+						@media (min-width: 320px) and (max-width: 767px) {
+							margin: 20px 5px 0 10px;
+						}
+					}
+					.price{
+						background: #a4785a;
+						color: $color1;
+						height: 47px;
+						margin: 0;
+						padding: 0;
+						@include display-position;
+						bottom: 2px;
+						@media (min-width: 320px) and (max-width: 767px) {
+							overflow: hidden;
+							height: auto;
+						}
+						span{
+							float: left;
+							margin-left: 12px;
+							padding-top: 12px;
+							@media (min-width: 768px) and (max-width: 983px) {
+								margin-left: 2px;
+							}
+							&.arrow-detail{
+								float: right;
+							    padding-top: 20px;
+							    padding-right: 10px;
+							    @media (min-width: 320px) and (max-width: 767px) {
+									padding-bottom: 10px;
+									padding-top: 10px;
+								}
+								&:after{
+									content: "\203A";
+									width:6px;
+									height: 8px;
+									color: $color1;
+									margin-left: 5px;
+								}
+							}
+							a{
+								@media (min-width: 320px) and (max-width: 767px) {
+									height: 32px;
+								}
+								&.detail{
+									position: relative;
+									background: none;
+									font-size: 12px;
+								    bottom: 0;
+								    text-decoration: underline;
+								    opacity: 1;
+								}
+								:after{
+									content: none;
+								}
+							}
+						}
+					}
+					.img-product{
+						position: relative;
+					    width: auto;
+					    height: auto;
+						a{
+							position: absolute;
+							bottom: 0;
+							right: 0;
+							background: #7b5229;
+							opacity: 0.8;
+							width: 100%;
+							color: $color1;
+							height: 26px;
+							font-size: 16px;
+							@media (min-width: 768px) and (max-width: 983px) {
+								font-size: 14px;
+							}
+							@media (min-width: 320px) and (max-width: 767px) {
+								font-size: 12px;
+							}
+							@media (min-width: 320px) and (max-width: 767px) {
+								height: 32px;
+							}
+							&.name-product{
+								&::after{
+									content: none;
+								}
+							}
+						}
+					}
+					&:hover{
+						.price{
+							background: $color-important;
+						}
+					}
+					&:hover{
+						outline: 4px solid #be0028;
+					    outline-offset: -4px;
+					    cursor: pointer;
+					    background: rgba(123, 82, 41, 0.4);
+						a{
+							background: $color-important;
+							opacity: 1;
+						}
+					}
+				}
+			}
+		}
+		.paginator {
+		 	width: 80px;
+		 	float: right;
+		 	padding-right: 24px;
+		 	a{
+				display: inline-block;
+			  	margin: -2px;
+			  	height: 20px;
+			  	min-width: 20px;
+			  	text-decoration: underline;
+			  	color: #502b0b;
+			  	font-size: 12px;
+			}
+			span{
+				text-decoration: none;
+				display: inline-block;
+			  	margin: -2px;
+			  	height: 20px;
+			  	min-width: 20px;
+			  	text-decoration: underline;
+			  	color: #502b0b;
+			  	font-size: 12px;
+			}
+			a{
+				&.current{
+					color: $color-primary;
+					text-decoration: none;
+				}
+			}
+		}
+		.paginator-top{
+			margin-top: 22px;
+			@media (min-width: 320px) and (max-width: 767px) {
+				margin-top: 10px;
+			}
+		}
+		.paginator-bottom{
+			margin-top: 14px;
+		}
+	}
+	.product-container-pagination{
+		.product-section{
+			height: auto;
+			@media (min-width: 768px) and (max-width: 983px) {
+				width: 100%;
+			}
+		}
+	}
+}

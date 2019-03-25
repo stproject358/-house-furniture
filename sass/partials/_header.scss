@@ -1,0 +1,239 @@
+header {
+	@include display-position;
+	width:100%;
+	border-radius: 10px;
+	height: 169px;
+	@media (min-width: 768px) and (max-width: 983px) {
+		height: auto;
+	}
+	@media (min-width: 320px) and (max-width: 767px) {
+		height: auto;
+	}
+	.header-top{
+		@include display-position;
+		width: 100%;
+		margin: 0;
+		padding: 0;
+		height: 34px;
+		background: #a4785a;
+		border-top-left-radius: 10px;
+	    border-top-right-radius: 10px;
+	    @media (min-width: 320px) and (max-width: 767px) {
+			height: 50px;
+			background: $color-important;
+			display: flex;
+			justify-content: space-between;
+		}
+	    .header-search{
+			float: left;
+			margin-left: 18px;
+			@media (min-width: 320px) and (max-width: 767px) {
+				display: none;
+			}
+			ul{
+				&.search{
+					display: block;
+					height: auto;
+					li{
+						float: left;
+						@include wh-auto;
+						a{
+							display: block;
+							font-size: 14px;
+							color: $color1;
+							text-decoration: underline;
+							padding: 11px 4px 9px 0;
+						}
+					}
+					.three-dots{
+						a{
+							text-decoration: none;
+						}
+					}
+				}
+			}
+		}
+		.header-navigation{
+			float:right;
+			@media (min-width: 320px) and (max-width: 767px) {
+				display: none;
+			}
+			ul{
+				&.navigation-list{
+					display: block;
+					@include wh-auto;
+					li{
+						float: left;
+						border-right: 2px groove #b59179;
+						a{
+							color: $color1;
+						    display: block;
+							padding: 11px 14px; 	
+							font-size: 12px;
+							&:hover{
+								color: #502b0b;
+							}
+						}
+						&:hover{
+							color: #502b0b;
+							background: #f0d5c3;
+						}
+						&:last-child{
+							border: none;
+							&:hover{
+								border-top-right-radius: 10px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	.header-middle-container{
+		@include wh-auto;
+		border: 1px solid #c8ae9c;
+		border-bottom-left-radius: 10px;
+		border-bottom-right-radius: 10px;
+		margin: 0;
+		padding: 0;
+		border-top: 0;
+		display: flex;
+		justify-content: space-between;
+		padding-top: 8px;
+		padding-bottom: 6px;
+		font-size: 12px;
+		line-height: 1.2em;
+		@media (min-width: 320px) and (max-width: 767px) {
+			display: none;
+		}
+		.logo{
+			margin-left: 8px;
+			float: left;
+			width: 210px;
+			height: 121px;
+			@media (min-width: 768px) and (max-width: 983px) {
+				height: auto;
+			}
+			img{
+				float: left;
+			}
+			h1{
+				text-indent: -99999px;
+			}
+		}
+		.cart{
+			margin-right: 8px;
+			width: 206px;
+			height: 121px;
+			color: $color1;
+			@media (min-width: 768px) and (max-width: 983px) {
+				height: auto;
+			}
+			.cart-title{
+				@include display-position;
+				height: 32px;
+				background: #be0028;
+				border-top-right-radius: 10px;
+				border-top-left-radius: 10px;
+			    overflow: hidden;
+			    p{
+			    	padding: 10px;
+					float: left;
+			    }
+			    img{
+			    	float: right;
+					padding: 8px 14px 0 0;
+			    }
+			}
+			.table-cart{
+				display: block;
+				height: 89px;
+				background: #a4785a;
+				border-bottom-left-radius: 10px;
+				border-bottom-right-radius: 10px;
+				overflow: hidden;
+				@media (min-width: 768px) and (max-width: 983px) {
+					height: auto;
+					width: 100%;
+				}
+				table{
+					width: 180px;
+				    margin: 23px 14px 0 12px;
+				    @media (min-width: 768px) and (max-width: 983px) {
+						margin: 10px 10px 0px 10px;
+					}
+				    td{
+				    	padding-bottom: 12px;
+				    	&.number-products{
+				    		text-align: right;
+				    	}
+				    }
+				    a{
+				    	color: #f0d5c3;
+						text-decoration: underline;
+				    }
+				}
+			}
+		}
+		.header-contact-skype{
+			width: 200px;
+			p{
+				&.color-primary{
+					color: $color-primary;
+					padding: 18px 0 26px;
+				}
+				&.color-important{
+					color: $color-important;
+				}
+			}	
+		}
+		.header-contact{
+			color: #666666;
+			width: 214px;
+			margin-right: 50px;
+			@media (min-width: 768px) and (max-width: 983px) {
+				margin-left: 33px;
+			}
+			.header-contact-list{
+				.phone{
+					padding: 18px 0 16px;
+					@include wh-auto;
+					@media (min-width: 768px) and (max-width: 983px) {
+						padding: 0;
+					}
+					p{
+						&.color-primary{
+							padding-bottom: 16px;
+							color: $color-primary;
+							@media (min-width: 768px) and (max-width: 983px) {
+								padding: 0 0 26px;
+							}
+						}
+						span{
+							&.color-important{
+								font-size: 24px;
+								color: $color-important;
+							}
+						}
+					}
+				}
+				.work-time{
+					border-top: 1px solid #dccbbf;
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+	

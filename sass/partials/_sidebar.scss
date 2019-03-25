@@ -1,0 +1,121 @@
+#sidebar{
+	width: 212px;
+	float: left;
+	display: block;
+	margin: 8px 16px 0 9px;
+	height: auto;
+	@media (min-width: 768px) and (max-width: 983px) {
+		width: 24%;
+		margin: 8px 5px 0 5px;
+	}
+	@media (min-width: 320px) and (max-width: 767px) {
+		display: none;
+	}
+	.head-sidebar{
+		background: #be0028;
+		width: 100%;
+		height:34px;
+		border-top-left-radius: 10px;
+		border-top-right-radius: 10px;
+		h3{
+			padding: 10px;
+			font-size: 16px;
+			color: #ffffff;
+		}
+	}
+	.menu-sidebar{
+		width: 100%;
+		display: block;
+		.menu-list{
+			width: 100%;
+			background: #f0d5c3;
+			border-bottom-left-radius: 10px;
+			border-bottom-right-radius: 10px;
+			li{
+			    &.menu-item{
+			    	height: auto;
+					cursor: pointer;
+				    padding: 9px 0 0px 0;
+				    .title-menu{
+				    	margin-left: 10px;
+				    	&:before{
+				    		content: "\203A";
+							position: relative;
+							margin-left: 3px;
+						    margin-right: 7px;
+							color: $color-important;
+							width: 7px;
+							height: 10px;
+							font-weight: bold;
+				    	}
+				    }
+				    ul{
+				    	&.touch-menu{
+					    	margin-left: 15px;
+							display: none;
+							li{
+								border:0;
+								padding: 0;
+								height: auto;
+								a{
+									color: $color1;
+									font-size: 11px;
+									border-bottom:0;
+									text-decoration: underline;
+									margin-left: 20px;
+								}
+							}
+
+						}
+				    }
+				    &:after{
+				    	content: " ";
+					    height: 1px;
+					    color: black;
+					    display: inline-block;
+					    border-bottom: 1px solid #c8aa95;
+					    width: 189px;
+					    margin-left: 10px;
+					    padding-top: 11px;
+					    position: relative;
+					    bottom: -2px;
+					    @media (min-width: 768px) and (max-width: 983px) {
+							width: 92%;
+						    margin-left: 5px;
+						    margin-right: 5px;
+						}
+				    }
+				    &:last-child{
+				    	padding-bottom: 18px;	
+				    	&:after{
+				    		display: none;
+				    	}
+				    }
+			    }
+			    &.active{
+			    	background-color: #a4785a;
+			    	.title-menu{
+			    		a{
+			    			color: #f0d5c3;
+							border-bottom: none;
+			    		}
+			    		&:before{
+			    			color: #f0d5c3;
+			    		}
+			    	}
+			    }
+			    &:last-child{
+			    	&.active{
+			    		border-bottom-left-radius: 10px;
+						border-bottom-right-radius: 10px;
+			    	}
+			    }
+			    a{
+			    	color: #502b0b;
+				    font-size: 12px;
+				    border-bottom: 2px groove #c7ac9a;
+			    }
+			}
+		}
+	}
+}
